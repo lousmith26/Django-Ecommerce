@@ -1,0 +1,30 @@
+{% extends 'main/base.html' %}
+{% load static %}
+
+{% block content %}
+
+<div class="main-content text-center">
+    <div class="title"><h1 class='mt-5 mb-5'>Featured Products</h1></div>
+
+    <div class="row">
+        <div class="col-lg-4">
+            <a href='#'><div class="card">
+                <img class='card-img-top' src="{% static 'images/products/tees/naruto.jpg' %}" alt="" class="card-img-top">
+                <div class="card-text"><h2>Naruto Tee Shirt</h2></div>
+            </div></a>
+        </div>
+        <div class="col-lg-4">
+            <a href="#"><div class="card">
+                <img src="{% static 'images/products/shoes/nike.jpg' %}" alt="" class="card-img-top">
+                <div class="card-text"><h2>Nike Skate Shoes</h2></div>
+            </div></a>
+        </div>
+        <div class="col-lg-4">
+            <a href="#"><div class="card">
+                <img src="{% static 'images/products/pants/black.jpg' %}" alt="" class="card-img-top">
+                <div class="card-text"><h2>Black Skinny Jeans</h2></div>
+            </div></a>
+        </div>
+    </div>
+</div>
+{% endblock %}
