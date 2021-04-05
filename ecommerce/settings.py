@@ -31,8 +31,7 @@ ALLOWED_HOSTS = []
 # Application definition
 
 INSTALLED_APPS = [
-    'slugify',
-    'phonenumber_field',
+    'cart',
     'main',
     'django.contrib.admin',
     'django.contrib.auth',

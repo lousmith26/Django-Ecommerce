@@ -1,7 +1,13 @@
 from django.shortcuts import render
 from .models import *
+from cart.cart import Cart
 
 # Create your views here.
+def cart_add(request, id):
+    cart  = Cart(request)
+    product = request.path()
+    print(product + ' Added to cart!')
+
 def home(request): 
     return render(request, 'main/home.html', context={})
 
@@ -18,19 +24,3 @@ def about(request):
 
 def contact(request):
     return render(request, 'main/contact.html', context={})
-
-def product(request, name):
-    try:
-        product = Shirt.objects.get(name=name)
-    except:
-        try:
-            product = Pant.objects.get(name=name)
-        except:
-            try: 
-                product = Shoe.objects.get(name=name)
-            except:
-                product = None
-    context = {
-        'product': product
-    }
-    return render(request, 'main/product.html', context=context)

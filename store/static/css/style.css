@@ -1,0 +1,16 @@
+body{
+    box-sizing: border-box;
+}
+
+li{
+    margin-right: 3rem;
+}
+
+.navbar-nav li a{
+    color: white;
+}
+
+.title{
+    text-decoration: underline;
+    text-transform: uppercase;
+}

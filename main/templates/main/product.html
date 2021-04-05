@@ -17,7 +17,7 @@
         <div class="col-lg-6">
             <h1 class="title" style='margin-top: 10rem; font-size: 4rem;'>{{ product.name }}</h1>
             <h2 style='font-size: 3rem;'>{{ product.price }}</h2>
-            <button class='btn btn-outline-dark'>Add To Cart</button>
+            <button class='btn btn-outline-dark'><a href="{% url 'cart_add' %} {{ product.id }}">Add To Cart</a></button>
         </div>
     </div>
 </div>

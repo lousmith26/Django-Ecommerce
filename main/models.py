@@ -1,9 +1,9 @@
 from django.db import models
-from phonenumber_field.modelfields import PhoneNumberField
 from django.utils.text import slugify
 
 # Create your models here.
 class Shirt(models.Model):
+    id = models.AutoField(primary_key=True)
     name = models.CharField(max_length=200)
     price = models.DecimalField(max_digits=6, decimal_places=2)
     image = models.ImageField(blank=True)
@@ -56,7 +56,6 @@ class Customer(models.Model):
     lastName = models.CharField(max_length=200)
     email = models.EmailField(max_length=200)
     address = models.CharField(max_length=200)
-    phoneNum = PhoneNumberField(blank=False)
 
     def __str__(self):
         return self.lastName
