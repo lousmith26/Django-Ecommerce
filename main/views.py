@@ -1,6 +1,6 @@
 from django.shortcuts import render
 from .models import *
-from cart.cart import Cart
+import cart
 
 # Create your views here.
 def cart_add(request, id):
@@ -13,9 +13,9 @@ def home(request):
 
 def store(request):
     context = {
-        'shirts': Shirt.objects.all(),
-        'shoes': Shoe.objects.all(),
-        'pants': Pant.objects.all()
+        'shirts': Product.objects.filter(category='Shirt'),
+        'pants': Product.objects.filter(category='Pant'),
+        'shoes': Product.objects.filter(category='Shoe')
     }
     return render(request, 'main/store.html', context=context)
 

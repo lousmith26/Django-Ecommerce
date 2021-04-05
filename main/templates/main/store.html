@@ -4,6 +4,53 @@
 {% block content %}
 
 <div class="content text-center">
+    <h2 class="mt-4 mb-4 title">Tee Shirts</h2>
+    <div class="row">
+        {% for shirt in shirts %}
+            <div class="col-lg-3 text-center">
+                <a href="product/{{ shirt.name }}"><div class="card">
+                    <img class='card-img-top' src="{% static 'images/products/tees/' %}{{ shirt.image }}" alt="">
+                    <div class="card-text bg-secondary text-white"><h3>{{ shirt.name }}</h3></div>
+                </div></a>
+            </div>
+        {% endfor %}
+    </div>
+
+    <h2 class="mt-4 mb-4 title">Pants</h2>
+    <div class="row">
+        {% for pant in pants %}
+            <div class="col-lg-3 text-center">
+                <a href="product/{{ pant.name }}"><div class="card">
+                    <img class='card-img-top' src="{% static 'images/products/pants/' %}{{ pant.image }}" alt="">
+                    <div class="card-text bg-secondary text-white"><h3>{{ pant.name }}</h3></div>
+                </div></a>
+            </div>
+        {% endfor %}
+    </div>
+
+    <h2 class="mt-4 mb-4 title">Shoes</h2>
+    <div class="row">
+        {% for shoe in shoes %}
+            <div class="col-lg-3 text-center">
+                <a href="product/{{ shoe.name }}"><div class="card"> <!-- Shoes link not loading shoe name -->
+                    <img class='card-img-top' src="{% static 'images/products/shoes/' %}{{ shoe.image }}" alt="">
+                    <div class="card-text bg-secondary text-white"><h3>{{ shoe.name }}</h3></div>
+                </div></a>
+            </div>
+        {% endfor %}
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+<!--
+<div class="content text-center">
     <h2 class='mt-4 mb-4 title'>Tee Shirts</h2>
     <div class="row">
     {% for shirt in shirts %}
@@ -37,5 +84,6 @@
             </div>   
         {% endfor %}
     </div>
-</div> 
+</div>
+-->
 {% endblock %}
