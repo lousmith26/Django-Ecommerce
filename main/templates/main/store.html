@@ -9,7 +9,7 @@
         {% for shirt in shirts %}
             <div class="col-lg-3 text-center">
                 <a href="product/{{ shirt.name }}"><div class="card">
-                    <img class='card-img-top' src="{% static 'images/products/tees/' %}{{ shirt.image }}" alt="">
+                    <img class='card-img-top' src="{% static 'images/products/' %}{{ shirt.image }}" alt="">
                     <div class="card-text bg-secondary text-white"><h3>{{ shirt.name }}</h3></div>
                 </div></a>
             </div>
@@ -21,7 +21,7 @@
         {% for pant in pants %}
             <div class="col-lg-3 text-center">
                 <a href="product/{{ pant.name }}"><div class="card">
-                    <img class='card-img-top' src="{% static 'images/products/pants/' %}{{ pant.image }}" alt="">
+                    <img class='card-img-top' src="{% static 'images/products/' %}{{ pant.image }}" alt="">
                     <div class="card-text bg-secondary text-white"><h3>{{ pant.name }}</h3></div>
                 </div></a>
             </div>
@@ -33,7 +33,7 @@
         {% for shoe in shoes %}
             <div class="col-lg-3 text-center">
                 <a href="product/{{ shoe.name }}"><div class="card"> <!-- Shoes link not loading shoe name -->
-                    <img class='card-img-top' src="{% static 'images/products/shoes/' %}{{ shoe.image }}" alt="">
+                    <img class='card-img-top' src="{% static 'images/products/' %}{{ shoe.image }}" alt="">
                     <div class="card-text bg-secondary text-white"><h3>{{ shoe.name }}</h3></div>
                 </div></a>
             </div>

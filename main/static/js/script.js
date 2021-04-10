@@ -1,0 +1,10 @@
+$(document).ready(function(){
+    $('.cart').hide();
+    $('#cart-toggle').click(function(){
+        if($('.cart').is(':visible')){
+            $('.cart').hide();
+        }else{
+            $('.cart').show();
+        }
+    });
+});
