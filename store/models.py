@@ -28,4 +28,3 @@ class CartItem(models.Model):
 class Cart(models.Model):
     owner = models.ForeignKey(Profile, on_delete=models.SET_NULL, null=True)
     items = models.ManyToManyField(CartItem)
-    date_orderd = models.DateTimeField(auto_now=True)

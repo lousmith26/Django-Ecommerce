@@ -28,11 +28,15 @@
                     <li class="nav-item mr-4"><a href="{% url 'contact' %}">Contact</a></li>
                 </ul> 
               </div>
-
-              <button id='cart-toggle'><span><i class="fa fa-shopping-cart" style="font-size:36px"></i></span></button>
+                {% if not request.user.is_authenticated %}
+                    <button class='btn btn-light btn-lg'><a style="color: black;" href="{% url 'users:register' %}">Sign Up</button>
+                    <button style="margin-right: 6rem; margin-left: 2rem;" class='btn btn-secondary btn-lg'><a style="color: white;" href="{% url 'users:login' %}">Login</a></button>
+                {% else %}
+                    <button class="btn btn-light btn-lg">Cart</button> 
+                    <button class="ml-4 btn btn-secondary btn-lg"><a style='color: white;' href="{% url 'users:signout' %}">Sign Out</a></button>  
+                {% endif %}
         </div>
-
-        {% if messages %}
+        {% if messages.success %}
             <div class="alert alert-success text-center">
                 <h5>{{ messages.success }}</h5>
             </div>

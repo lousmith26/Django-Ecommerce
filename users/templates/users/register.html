@@ -1,0 +1,16 @@
+{% extends 'main/base.html' %}
+{% load crispy_forms_tags %}
+{% load static %}
+
+{% block content %}
+    <div class="content text-center">
+        <div class="card mx-auto mt-4" style='width: 40rem; background-color: #bcc3d6'>
+            <h2>Sign Up</h2>
+            <form action="{% url 'users:register' %}" method="POST">
+                {% csrf_token %}
+                {{ form | crispy }}
+                <input class="btn btn-outline-dark mb-3" type="submit" value="Register">
+            </form>
+        </div>
+    </div>
+{% endblock %}

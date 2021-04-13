@@ -9,8 +9,8 @@
                 <img style='margin-top: 5rem; margin-left: 10rem; width: 38rem; float: left;' src="{% static 'images/products/' %}{{ product.image }}" alt="">
         </div>
         <div class="col-lg-6">
-            <h1 class="title" style='margin-top: 10rem; font-size: 4rem;'>{{ product.name }}</h1>
-            <h2 style='font-size: 3rem;'>{{ product.price }}</h2>
+            <h1 class="title" style='color: black; margin-top: 10rem; font-size: 4rem;'>{{ product.name }}</h1>
+            <h2 style='font-size: 3rem; color: black;'>{{ product.price }}</h2>
             <button class='btn btn-outline-dark'><a href="{% url 'add_to_cart' %}/{{ product.name }}">Add To Cart</a></button>
         </div>
     </div>
